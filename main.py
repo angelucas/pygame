@@ -1,5 +1,6 @@
 import pygame
 import sound
+import screen
 from pygame import *
 
 
@@ -11,7 +12,8 @@ class App:
 
     def on_init(self):
         pygame.init()
-        pygame.display.set_caption('PyPenis')
+        # Window Name
+        screen.nome_da_janela
         self._display_surf = pygame.display.set_mode(self.size, pygame.HWSURFACE | pygame.DOUBLEBUF)
         self._running = True
         # Start playing the tittle music
