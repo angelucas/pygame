@@ -1,15 +1,6 @@
 import pygame
+import sound
 from pygame import *
-
-# Starting the mixer
-mixer.init()
-
-# Loading the song
-title_screen_intro = 'audio/tittle_screen_bg_intro.ogg'
-mixer.music.load(title_screen_intro)
-
-# Setting the volume
-mixer.music.set_volume(0.5)
 
 
 class App:
@@ -20,10 +11,11 @@ class App:
 
     def on_init(self):
         pygame.init()
+        pygame.display.set_caption('PyPenis')
         self._display_surf = pygame.display.set_mode(self.size, pygame.HWSURFACE | pygame.DOUBLEBUF)
         self._running = True
-        # Start playing the song
-        mixer.music.play()
+        # Start playing the tittle music
+        sound.mixer.music.play()
 
     def on_event(self, event):
         if event.type == pygame.QUIT:
