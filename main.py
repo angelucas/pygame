@@ -1,23 +1,17 @@
 import pygame
-import sound
 import screen
+import audio
 from pygame import *
 
 
 class App:
     def __init__(self):
         self._running = True
-        self._display_surf = None
-        self.size = self.weight, self.height = 800, 600
 
     def on_init(self):
         pygame.init()
-        # Window Name
-        screen.nome_da_janela
-        self._display_surf = pygame.display.set_mode(self.size, pygame.HWSURFACE | pygame.DOUBLEBUF)
+        screen.init()
         self._running = True
-        # Start playing the tittle music
-        sound.mixer.music.play()
 
     def on_event(self, event):
         if event.type == pygame.QUIT:
